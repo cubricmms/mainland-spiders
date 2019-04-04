@@ -28,7 +28,7 @@ class LoupanItem(scrapy.Item):
     avg_price = scrapy.Field(input_processor=MapCompose(strip))
     total_price = scrapy.Field(input_processor=MapCompose(strip))
 
-class KeItem(scrapy.Item):
+class FangItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass

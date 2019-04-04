@@ -2,12 +2,12 @@
 import scrapy
 from scrapy.loader import ItemLoader
 from scrapy.http import Request
-from ke.items import CityItem, LoupanItem
+from fang.items import CityItem, LoupanItem
 from urllib.parse import urljoin
 from urllib.parse import urlparse
 
-class CrawlSpider(scrapy.Spider):
-    name = 'crawl'
+class KeSpider(scrapy.Spider):
+    name = 'ke'
     allowed_domains = ['ke.com']
     start_urls = ['https://www.ke.com/city/']
     def parse(self, response):
