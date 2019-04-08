@@ -9,6 +9,7 @@ import psycopg2
 
 class FangPipeline(object):
     def __init__(self):
+        # TODO: get rid of hard-coded username
         hostname = 'localhost'
         username = "cubric"
         database = "ke"
