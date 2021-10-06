@@ -21,7 +21,7 @@ PyHamcrest==1.9.0
 pyOpenSSL==19.0.0
 queuelib==1.5.0
 requests==2.21.0
-Scrapy==1.6.0
+Scrapy==1.8.1
 scrapy-scylla-proxies==0.5.0.5
 Scrapy-UserAgents==0.0.1
 service-identity==18.1.0
