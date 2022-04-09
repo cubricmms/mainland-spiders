@@ -10,8 +10,9 @@ url = "https://mirrors.aliyun.com/pypi/simple/"
 default = true
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.8"
 Scrapy = "^2.6.1"
+twisted = "22.1"
 
 [tool.poetry.dev-dependencies]
 
