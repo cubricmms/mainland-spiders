@@ -10,6 +10,7 @@ Scrapy = "^2.6.1"
 scrapy-fake-useragent = "^1.4.4"
 psycopg2 = "^2.9.3"
 SQLAlchemy = "^1.4.39"
+sentry-sdk = "^1.7.2"
 
 [tool.poetry.dev-dependencies]
 
