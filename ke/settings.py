@@ -19,7 +19,6 @@ NEWSPIDER_MODULE = "ke.spiders"
 
 # log
 LOG_LEVEL = logging.DEBUG
-# LOG_FILE = f'scrapy_{datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S")}.log'
 
 
 USER_AGENTS = [
@@ -59,13 +58,13 @@ DEFAULT_REQUEST_HEADERS = {
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-# SPIDER_MIDDLEWARES = {
-# }
+SPIDER_MIDDLEWARES = {
+    "ke.middlewares.ValidateJsonResponseMiddleware": 543,
+}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-    # ke.middlewares.BeikeDownloaderMiddleware': 543,
     "scrapy.downloadermiddlewares.useragent.UserAgentMiddleware": None,
     "scrapy.downloadermiddlewares.retry.RetryMiddleware": None,
     "scrapy_fake_useragent.middleware.RandomUserAgentMiddleware": 400,
@@ -82,8 +81,9 @@ EXTENSIONS = {
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-# ITEM_PIPELINES = {
-# }
+ITEM_PIPELINES = {
+    "ke.pipelines.SaveHousesPipeline": 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
